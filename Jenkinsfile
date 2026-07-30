@@ -1,10 +1,10 @@
 pipeline {
     agent any
 
-  environment {
-        IMAGE_NAME = 'smandalbgp-sketch-app'
-        PATH = "/Users/aps/.nvm/versions/node/v24.18.0/bin:${env.PATH}"
-    }
+environment {
+    IMAGE_NAME = 'smandalbgp-sketch-app'
+    PATH = "/Users/aps/.nvm/versions/node/v24.18.0/bin:/usr/local/bin:${env.PATH}"
+}
 
     stages {
         stage('Checkout') {
