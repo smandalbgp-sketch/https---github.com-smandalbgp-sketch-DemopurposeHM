@@ -32,8 +32,8 @@ environment {
         }
 
         stage('Deploy') {
-    steps {
-        sh '''
+           steps {
+            sh '''
             docker stop hospital-app || true
             docker rm hospital-app || true
             docker run -d --name hospital-app -p 8081:80 smandalbgp-sketch-app:${BUILD_NUMBER}
