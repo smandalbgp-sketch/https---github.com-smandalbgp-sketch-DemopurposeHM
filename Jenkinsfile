@@ -32,14 +32,10 @@ environment {
         }
 
         stage('Deploy') {
-           steps {
-            sh '''
-            docker stop hospital-app || true
-            docker rm hospital-app || true
-            docker run -d --name hospital-app -p 8081:80 smandalbgp-sketch-app:${BUILD_NUMBER}
-        '''
-    }
-}
+            steps {
+                echo 'Add deployment steps here (e.g., push to registry, docker run, k8s apply, etc.)'
+            }
+        }
 
     post {
         success {
